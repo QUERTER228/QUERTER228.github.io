@@ -3,9 +3,7 @@
 #HeaderM {
   font-family: 'Rubik Doodle Shadow', cursive;
   text-align: center;
-  size: 20%;
-  height: 15%;
-  background-color: 4b0082;
+  color: #4b0082;
 }
 .link:hover {
 	cursor: pointer;
