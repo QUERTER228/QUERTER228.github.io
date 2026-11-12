@@ -6,3 +6,32 @@
   size: 20%
   height: 15%
 }
+/*headers*/
+h1{
+	font-size: 190%;
+	font-weight: normal;
+}
+h2{
+	font-weight: normal;
+	font-size: 150%;
+}
+h3{
+	font-weight: bold;
+	font-size: 130%;
+}
+h4{
+	font-weight: bold;
+	font-size: 120%;
+}
+h5 {
+	font-weight: bold;
+	font-size: 100%;
+}
+h6 {
+	font-weight: bold;
+	font-size: 90%;
+}
+
+img{
+	border-width: 0px;
+}
