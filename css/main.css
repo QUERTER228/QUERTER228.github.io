@@ -1,13 +1,10 @@
 /*-------classes------s*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Rubik+Doodle+Shadow&display=swap');
-
-#HeaderM {display: grid;
-  text-align: center;}
-#HeaderM span {grid-area: 1 / 1;}
-#HeaderM .fill {font-family: 'Rubik', sans-serif;
-  color: white;}
-#HeaderM .doodle { font-family: 'Rubik Doodle Shadow', cursive;
-  color: #4b0082;}
+@import url('@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&display=swap');
+#HeaderM {
+  font-family: 'Rubik Doodle Shadow', cursive;
+  text-align: center;
+  color: #4b0082;
+}
 .link:hover {
 	cursor: pointer;
 }
