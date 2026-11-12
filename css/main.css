@@ -29,4 +29,7 @@ h6 {font-weight: bold;
 	font-size: 110%;}
 img{border-width: 0px;}
 header {background-image: url('https://grizly.club/uploads/posts/2022-12/1670532820_grizly-club-p-povtoryayushchii-uzor-8.png')}
-table {border: 1px solid black; font-weight: normal;}
+td,
+th {border: 1px solid black;
+  padding: 8px;}
+
