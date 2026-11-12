@@ -5,6 +5,7 @@
   text-align: center;
   size: 20%;
   height: 15%;
+  background-color: 4b0082;
 }
 .link:hover {
 	cursor: pointer;
