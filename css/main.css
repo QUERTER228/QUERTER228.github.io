@@ -11,6 +11,7 @@
 	cursor: pointer;
 }
 /*--------tags---------*/
+body {background-color: #181a1b;}
 h1{
 	font-size: 210%;
 	font-weight: normal;
