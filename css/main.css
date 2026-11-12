@@ -1,7 +1,7 @@
 /*-------classes------s*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 #HeaderM {
-  font-family: 'Rubik 80s Fade', cursive;
+  font-family: 'Oswald', cursive;
   text-align: center;
   color: #4b0082;
 }
