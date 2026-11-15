@@ -1,28 +1,47 @@
-/*-------classes------s*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-a, a:visited {
-	  text-decoration: none;
-	  color: inherit;
+* {
+  box-sizing: border-box;
 }
+/*-------classes------s*/
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: 'Oswald', cursive;
   width: 100%;
-  height: 20%;
+  min-height: 15vh;
   background-image: url(Header.svg);
 }
 main {
+  display: inline-flex;
   text-align: center;
+  justify-content: center;
   width: 70%;
-  height: 60%;
+  min-height: 60vh;
   background-color: #4b0082;
   border-left: solid 10px white;
   border-right: solid 10px white;
-  position: absolute;
-  left: 15%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+}
+aside {
+  display: inline-flex;
+  text-align: center;
+  justify-content: left;
+  width: 14.5%;
+  min-height: 60vh;
+  background-color: #4b0082;
+  border-left: solid 10px white;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #TitleH {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.5em 1.25em;
   background-color: #4b0082;
   user-select: none;
@@ -34,7 +53,10 @@ main {
   color: black;
 }
 /*--------tags---------*/
-body {background-color: #181a1b; color: #fff; font-family: 'Roboto';}
+body {
+  margin: 0px; padding: 0px;
+  background-color: #181a1b; color: #fff; font-family: 'Roboto';
+}
 h1{
 	font-size: 210%;
 	font-weight: bold;
@@ -51,4 +73,16 @@ h6 {font-weight: bold;
 	font-size: 110%;}
 img{border-width: 0px;}
 table {border: 1px solid grey;}
+a, a:visited {
+	text-decoration: none;
+  color: inherit;
+}
 
+@media (max-width: 768px) {
+  aside, main {
+    float: none;
+    width: 100%;
+    min-height: auto;
+    margin-bottom: 10px;
+  }
+}
