@@ -77,12 +77,3 @@ a, a:visited {
 	text-decoration: none;
   color: inherit;
 }
-
-@media (max-width: 768px) {
-  aside, main {
-    float: none;
-    width: 100%;
-    min-height: auto;
-    margin-bottom: 10px;
-  }
-}
