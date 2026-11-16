@@ -14,43 +14,56 @@ header {
   min-height: 15vh;
   background-image: url(Header.svg);
 }
-main {
-  display: inline-flex;
-  text-align: center;
-  justify-content: center;
-  width: 70%;
-  min-height: 60vh;
-  background-color: #4b0082;
-  border-left: solid 10px white;
-  border-right: solid 10px white;
-  margin: 0 auto;
-  padding: 0.5em 0;
-}
-aside {
-  display: inline-flex;
-  text-align: center;
-  justify-content: left;
-  width: 14.5%;
-  min-height: 60vh;
-  background-color: #4b0082;
-  border-left: solid 10px white;
-}
 .layout {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+}
+aside {
+  text-align: center;
+  width: 14.5%;
+  min-height: 70vh;
+  background-color: #4b0082;
+  border-left: solid 10px white;
+  flex-direction: column;
+  order: -1;
+}
+.sidebar {
+  user-select: none;
+  display: block;
+  border-radius: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #181a1b;
+}
+main {
+  text-align: center;
+  width: 70%;
+  min-height: 70vh;
+  background-color: #4b0082;
+  border-left: solid 10px white;
+  border-right: solid 10px white;
+  margin: 0 0.5%;
+  padding: 0.5em 0;
 }
 #TitleH {
-  display: inline-flex;
-  padding: 0.5em 1.25em;
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  border-radius: 10px;
   background-color: #4b0082;
   user-select: none;
+  flex: 0 0 auto;
 }
-#TitleH:hover {
+.button:hover, #TitleH:hover {
   cursor: pointer;
+  padding: 0.5em;
   border-radius: 10px;
   background-color: white;
   color: black;
+}
+#TitleH:hover {
+  padding: 0.5em 1em;
 }
 /*--------tags---------*/
 body {
@@ -61,7 +74,7 @@ h1{
 	font-size: 210%;
 	font-weight: bold;
 }
-h2{font-weight: normal;
+h2{font-weight: bold;
 	font-size: 170%;}
 h3{font-weight: bold;
 	font-size: 150%;}
