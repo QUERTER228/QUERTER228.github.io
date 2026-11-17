@@ -2,8 +2,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   box-sizing: border-box;
+  -webkit-user-drag: none;
 }
-/*-------classes------s*/
+/*--------reset--------*/
+html {height: 100%; scroll-behavior: smooth;}
+body {
+  min-height: 100%;
+   margin: 0; padding: 0;
+    font-family: 'Roboto', sans-serif;
+     background-color: var(--main-color);
+     color: white;
+     not h1,h2,h3,h4,h5,h6{font-size: 125%;}
+    }
+/*--------var----------*/
+/*colors*/
+:root {
+  --main-color: #181a1b;
+  --secondary-color: indigo;
+}
+/*--------types---------*/
+[type="button"] {
+  transition: all ease-out 150ms;
+}
+[type="button"]:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.5em 0.5em;
+}
+[type="button"]:active {
+  background-color: #310055; /* Делаем цвет чуть темнее основного */
+  transform: scale(0.96); /* Слегка уменьшаем элемент, имитируя физическое нажатие */
+}
+/*--------ids-----------*/
+#TitleH {
+  display: flex;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  user-select: none;
+  flex: 0 0 auto;
+}
+#TitleH:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 0.5em 1em;
+}
+/*-------classes-------*/
 header {
   display: flex;
   align-items: center;
@@ -17,13 +66,13 @@ header {
 .layout {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 aside {
   text-align: center;
   width: 14.5%;
-  min-height: 70vh;
-  background-color: #4b0082;
+  min-height: auto;
+  background-color: var(--secondary-color);
   border-left: solid 10px white;
   flex-direction: column;
   order: -1;
@@ -34,41 +83,46 @@ aside {
   border-radius: 10px;
   padding: 0.5em;
   margin: 0.5em;
-  background-color: #181a1b;
+  background-color: var(--main-color);
 }
-main {
+.sidebar-t {
+  display: block;
+  overflow-wrap: break-word;
+  padding: 0.5em;
+}
+#menuAside {
+  display: none;
+}
+#aboutUs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 70%;
-  min-height: 70vh;
-  background-color: #4b0082;
+  width: auto;
+  min-height: auto;
+  background-color: var(--secondary-color);
   border-left: solid 10px white;
   border-right: solid 10px white;
   margin: 0 0.5%;
   padding: 0.5em 0;
+  margin-top: 0;
 }
-#TitleH {
-  display: flex;
-  margin: 0 auto;
-  padding: 0.5em 1em;
-  border-radius: 10px;
-  background-color: #4b0082;
+footer {
+  text-align: center;
+  width: 100%;
+  min-height: auto;
+  background-color: var(--main-color);
+  border-top: solid 10px white;
+  bottom: 0;
+  z-index: 3;
   user-select: none;
-  flex: 0 0 auto;
-}
-.button:hover, #TitleH:hover {
-  cursor: pointer;
-  padding: 0.5em;
-  border-radius: 10px;
-  background-color: white;
-  color: black;
-}
-#TitleH:hover {
-  padding: 0.5em 1em;
 }
 /*--------tags---------*/
-body {
-  margin: 0px; padding: 0px;
-  background-color: #181a1b; color: #fff; font-family: 'Roboto';
+p{
+  font-size: 125%;
+  text-align: justify;
+  text-indent: 1em;
+  margin: 1em;
 }
 h1{
 	font-size: 210%;
@@ -89,4 +143,69 @@ table {border: 1px solid grey;}
 a, a:visited {
 	text-decoration: none;
   color: inherit;
+}
+@view-transition {
+  navigation: auto;
+}
+@media (max-width: 768px) {
+  #HeaderH {
+    margin: 1em 1em;
+  }
+  h1{
+	font-size: 190%;
+	font-weight: bold;
+}
+  h2{font-weight: bold;
+	  font-size: 150%;}
+ .layout {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65vw;
+    height: 100%;
+    min-height: auto;
+    border-left: none;
+    border-right: solid 10px white;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+  }
+
+  aside.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  #menuAside {
+  display: block;
+  font-size: 125%;
+  background-color: var(--main-color);
+  user-select: none;
+  padding: 0.5em 0.5em;
+  width: 63vw;
+  border-radius: 0 10px 10px 0;
+  }
+
+  #aboutUs_Functional {
+  margin-top: auto;
+  background-color: var(--secondary-color);
+  display: block;
+  width: 100%;
+  }
+  
+  #aboutUs {
+    width: auto;
+    min-height: auto;
+    border-left: none;
+    border-right: none;
+  }
 }
