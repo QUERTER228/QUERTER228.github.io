@@ -11,28 +11,31 @@ body {
    margin: 0; padding: 0;
     font-family: 'Roboto', sans-serif;
      background-color: var(--main-color);
-     color: white;
+     color: var(--text-color);
      not h1,h2,h3,h4,h5,h6{font-size: 125%;}
     }
 /*--------var----------*/
 /*colors*/
 :root {
-  --main-color: #181a1b;
-  --secondary-color: indigo;
+  --text-color: #e6e1f0;
+  --main-color: #2b2836;
+  --secondary-color: #43395d;
+  --border-color: #635685;
+  --accent-color: #7c68ad;
 }
 /*--------types---------*/
 [type="button"] {
   transition: all ease-out 150ms;
+  border-radius: 10px;
 }
 [type="button"]:hover {
   cursor: pointer;
-  border-radius: 10px;
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   padding: 0.5em 0.5em;
 }
 [type="button"]:active {
-  background-color: #310055; /* Делаем цвет чуть темнее основного */
+  background-color: var(--secondary-color); /* Делаем цвет чуть темнее основного */
   transform: scale(0.96); /* Слегка уменьшаем элемент, имитируя физическое нажатие */
 }
 /*--------ids-----------*/
@@ -48,8 +51,8 @@ body {
 #TitleH:hover {
   cursor: pointer;
   border-radius: 10px;
-  background-color: white;
-  color: black;
+  background-color: var(--text-color);
+  color: var(--main-color);
   padding: 0.5em 1em;
 }
 /*-------classes-------*/
@@ -61,7 +64,9 @@ header {
   font-family: 'Oswald', cursive;
   width: 100%;
   min-height: 15vh;
-  background-image: url(Header.svg);
+  background-color: var(--text-color);
+  background-blend-mode: multiply;
+  background-image: url(../img/header.svg);
 }
 .layout {
   display: flex;
@@ -79,7 +84,7 @@ aside {
   width: 14.5%;
   min-height: auto;
   background-color: var(--secondary-color);
-  border-left: solid 10px white;
+  border-left: solid 3px var(--border-color);
   flex-direction: column;
   order: -1;
 }
@@ -107,8 +112,8 @@ aside {
   width: 100%;
   min-height: auto;
   background-color: var(--secondary-color);
-  border-left: solid 10px white;
-  border-right: solid 10px white;
+  border-left: solid 3px var(--border-color);
+  border-right: solid 3px var(--border-color);
   margin: 0;
   padding: 0.5em 0;
   margin-top: 0;
@@ -118,7 +123,7 @@ footer {
   width: 100%;
   min-height: auto;
   background-color: var(--main-color);
-  border-top: solid 10px white;
+  border-top: solid 3px var(--border-color);
   bottom: 0;
   z-index: 3;
   user-select: none;
@@ -145,11 +150,15 @@ h5 {font-weight: bold;
 h6 {font-weight: bold;
 	font-size: 110%;}
 img{border-width: 0px;}
-table {border: 1px solid grey;}
+table {border: 3px solid var(--border-color);}
 a, a:visited {
 	text-decoration: none;
   color: inherit;
 }
+hr {                      /* Убираем стандартную белую объёмную рамку */                       /* Задаём нужную толщину линии */
+  border: 0;
+}
+/*------mobile---------*/
 @view-transition {
   navigation: auto;
 }
@@ -183,7 +192,7 @@ a, a:visited {
     height: 100%;
     min-height: auto;
     border-left: none;
-    border-right: solid 10px white;
+    border-right: solid 3px var(--border-color);
     transform: translateX(-100%);
     opacity: 0;
     visibility: hidden;
