@@ -346,4 +346,19 @@ button {
     opacity: 1;
     visibility: visible;
   }
+  .layout::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 5;
+  }
+
+  .layout:has(aside.active)::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
